@@ -19,6 +19,8 @@ public class Ja0120_07 {
 		dd2.eng = 98;
 		dd2.math = 97;
 		
+//		Data2 d4 = new Data2();
+		
 		Data2 d2 = new Data2(1,"홍길동",100,100,99);
 		Data2 d3 = new Data2(2,"유관순",99,98,97);
 		System.out.println(d2.value);
@@ -39,7 +41,7 @@ class Data2{
 	int math;
 	int total;
 	double avg;
-	Data2(){} //기본생성자
+	
 	Data2(int x,String n,int k,int e,int m){
 		value = x;
 		name = n;
