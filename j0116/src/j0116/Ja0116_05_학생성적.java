@@ -2,7 +2,7 @@ package j0116;
 
 import java.util.Scanner;
 
-public class Ja0116_05 {
+public class Ja0116_05_학생성적 {
 
 	public static void main(String[] args) {
 		// 학생성적프로그램

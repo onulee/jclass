@@ -1,18 +1,50 @@
 package j0120;
 
+import java.util.Scanner;
+
 public class Ja0120_08 {
 
 	public static void main(String[] args) {
 
-		Car c1 = new Car("red","auto",5);
-		Car c2 = new Car();
-		c2 = c1; //얕은 복사
-		Car c3 = new Car(c1);
+		Scanner scan = new Scanner(System.in);
+		Stuscore[] s = new Stuscore[3]; //배열선언
+		
+		for(int i=0;i<3;i++) {
+			System.out.println("학생이름을 입력하세요.");
+			String name = scan.next();
+			System.out.println("국어점수를 입력하세요.");
+			int kor = scan.nextInt();
+			System.out.println("영어점수를 입력하세요.");
+			int eng = scan.nextInt();
+			System.out.println("수학점수를 입력하세요.");
+			int math = scan.nextInt();
+			s[i] = new Stuscore(name, kor, eng, math);
+			s[i].print();
+		}
+		
+		//4번째 학생
+		Stuscore s1 = new Stuscore();
+		System.out.println(s1.count);
+		s1.name = "강감찬";
+		s1.kor = 80;
+		s1.eng = 80;
+		s1.math = 80;
+		s1.total = s1.kor+s1.eng+s1.math;
+		s1.avg = s1.total/3.0;
+		s1.print();
 		
 		
 		
 		
 		
+		
+		
+		
+		
+//		Car c1 = new Car("red","auto",5);
+//		Car c2 = new Car();
+//		c2 = c1; //얕은 복사
+//		Car c3 = new Car(c1);
 		
 		// 객체선언후 1,홍길동,100,100,100 넣어서 
 		// 출력 : 1,홍길동,100,100,100,300,100.0 
