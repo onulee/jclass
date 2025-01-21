@@ -8,9 +8,7 @@ public class Point {
 		this.y = y;
 	}
 	
-	
 	int x;
 	int y;
-	
 
 }
