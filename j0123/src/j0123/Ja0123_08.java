@@ -17,7 +17,7 @@ public class Ja0123_08 {
 		
 		System.out.println("개수 : "+set.size());
 		
-		Iterator i = set.iterator();
+		Iterator i = set.iterator(); //1회성
 		while(i.hasNext()) {
 			System.out.println(i.next());
 		}
