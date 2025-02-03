@@ -18,6 +18,7 @@ public class Shop_Deck {
 		System.out.println("3. 노트북");
 		System.out.println("4. 냉장고");
 		System.out.println("5. 세탁기");
+		System.out.println("6. 배송지,색상");
 		System.out.println("7. 구매한 리스트보기");
 		System.out.println("8. 현금충전");
 		System.out.println("9. 상품등록 - 관리자");
@@ -68,5 +69,37 @@ public class Shop_Deck {
 			}
 		}//while
 	}//login
+
+	//상품구매리스트
+	public void proList() {
+		int sum = 0;
+		System.out.println("      [ 상품구매리스트 ]");
+		System.out.println("-------------------------------");
+		if(list.isEmpty()) {
+			System.out.println("구매한 리스트가 없습니다.");
+		}else {
+			System.out.printf("상품리스트 개수 : %d \n",list.size());
+			for(int i=0;i<list.size();i++) {
+				System.out.printf("%s,",list.get(i).getName());
+				sum += list.get(i).getPrice();
+			}
+			System.out.println();
+		}
+		System.out.printf("상품총구매 금액 : %,d 원 \n",sum);
+		
+	}
+
+	//현금충전
+	public void charge() {
+		System.out.println("[ 현금 충전 ]");
+		System.out.printf("현재 잔액 : %,d 원 \n",user1.getMoney());
+		System.out.println("-----------------------------------");
+		System.out.println("충전할 금액을 입력하세요. >> ");
+		int m = scan.nextInt();
+		user1.setMoney(user1.getMoney()+m);
+		System.out.printf("충전금액 : %,d 원 \n",m);
+		System.out.printf("충전후 잔액 : %,d 원 \n",user1.getMoney());
+		
+	}
 
 }

@@ -35,6 +35,18 @@ public class ShopMall {
 			case 3:
 				sd.buy(new Computer());
 				break;
+			case 4:
+				sd.buy(new Refrigerator());
+				break;
+			case 5:
+				sd.buy(new Washing());
+				break;
+			case 7: //상품구매리스트
+				sd.proList();
+				break;
+			case 8: //현금충전
+				sd.charge();
+				break;
 				
 			case 0:
 				System.out.println("[ 프로그램 종료 ]");
