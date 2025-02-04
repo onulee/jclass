@@ -14,7 +14,7 @@
 	    if(saveId != null) {
 	    	Cookie cookie = new Cookie("cook_id",id); //쿠키객체생성
 		    cookie.setMaxAge(60*60*24*365); // 60초 * 60분 * 24시간 *365일 (1년)
-		    response.addCookie(cookie);
+		    response.addCookie(cookie); //로컬컴퓨터에 저장(자신의 컴퓨터)
 	%>	    
         <div><%= saveId[0] %> (가)이 저장되었습니다.</div>
 	    <%}else{
