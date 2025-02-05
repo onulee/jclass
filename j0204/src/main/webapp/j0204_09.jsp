@@ -25,8 +25,8 @@
 		  Context ctx = new InitialContext();
 		  Context envContext = (Context)ctx.lookup("java:/comp/env");
 		  ds = (DataSource)envContext.lookup("ora21");
+		  conn = ds.getConnection();
 		   String sql = "select * from board";
-		   conn = ds.getConnection();
 		   pstmt = conn.prepareStatement(sql);
 		   rs = pstmt.executeQuery();
 		   out.println("db접속 <br/>");
